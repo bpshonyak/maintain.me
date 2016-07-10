@@ -11,7 +11,7 @@ import reducers from './reducers';
 import routes from './routes';
 
 // stylesheets
-import './style/style.scss';
+import './style/global.scss';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
