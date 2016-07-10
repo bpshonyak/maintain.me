@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class App extends Component {
-  render() {
+ const App = (props) => {
     return (
       <div>
-        { this.props.children }
+        { props.children }
         <h1>Root App Component</h1>
       </div>
     );
-  }
 }
+
+export default App;
