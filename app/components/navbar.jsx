@@ -5,7 +5,7 @@ export default class Nav extends Component {
   render() {
     return (
       <AppBar
-        title="matintain.me"
+        title="maintain.me"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
       />
     );

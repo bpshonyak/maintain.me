@@ -6,6 +6,6 @@ import LoginForm from './components/login_form';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={LoginForm} />
+    <Route path="login" component={LoginForm} />
   </Route>
 )
