@@ -3,11 +3,15 @@ import AppBar from 'material-ui/AppBar';
 
 export default class Nav extends Component {
   render() {
+
     return (
-      <AppBar
-        title="maintain.me"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
-      />
+      <div>
+        <AppBar
+          title="maintain.me"
+          iconClassNameRight="muidocs-icon-navigation-expand-more">
+        </AppBar>
+      </div>
+
     );
   }
 }
