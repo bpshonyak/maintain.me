@@ -1,7 +1,8 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {cyan500} from 'material-ui/styles/colors';
+
+import Nav from './navbar';
 
 const muiTheme = getMuiTheme({
     palette: {
@@ -13,12 +14,14 @@ const muiTheme = getMuiTheme({
     }
 });
 
-
  const App = (props) => {
     return (
       <div>
          <MuiThemeProvider muiTheme={muiTheme}>
-             { props.children }
+             <div>
+                <Nav />
+                { props.children }
+             </div>
         </MuiThemeProvider>
       </div>
     );

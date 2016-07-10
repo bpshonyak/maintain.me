@@ -2,10 +2,10 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import App from './components/app';
-import Nav from './components/navbar';
+import LoginForm from './components/login_form';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={Nav} />
+    <IndexRoute component={LoginForm} />
   </Route>
 )
