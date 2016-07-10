@@ -16,7 +16,8 @@ module.exports = {
         cacheDirectory: true,
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    }
+  ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

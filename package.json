@@ -2,10 +2,10 @@
   "name": "maintain.me",
   "version": "0.0.1",
   "description": "Simple software maintenance tool",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server index.html"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
