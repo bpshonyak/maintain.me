@@ -1,10 +1,12 @@
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
  const App = (props) => {
     return (
       <div>
-        { props.children }
-        <h1>Root App Component</h1>
+         <MuiThemeProvider>
+             { props.children }
+        </MuiThemeProvider>
       </div>
     );
 }

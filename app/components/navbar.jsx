@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import AppBar from 'material-ui/AppBar';
 
 export default class Nav extends Component {
   render() {
     return (
-      <div>
-        <h1>Navigation Bar</h1>
-      </div>
+      <AppBar
+        title="matintain.me"
+        iconClassNameRight="muidocs-icon-navigation-expand-more"
+      />
     );
   }
 }
