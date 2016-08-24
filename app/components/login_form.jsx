@@ -1,43 +1,36 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import FontIcon from 'material-ui/FontIcon';
 
 class LoginForm extends Component {
 
+  handleSubmit(e) {
+    e.preventDefault();
+    //TODO: Handle submittion
+  }
+
   render() {
-
-    const iconStyles = {
-      marginRight: 24,
-      fontSize: 50
-    };
-
     return (
-      <div className="form-container">
-        <TextField
-        hintText="Email"
-        errorText=""
-        />
-        <br/>
-        <TextField
-          hintText="Password"
-          type="password"
-          errorText=""
-        />
-        <br/>
-        <RaisedButton label="Login" primary={true} />
-        <p>Or login with a social provider!</p>
-
-        <FontIcon
-          className="fa fa-github"
-          style={iconStyles}
-        />
-
-        <FontIcon
-          className="fa fa-facebook-official"
-          style={iconStyles}
-        />
-
+      <div>
+        <div className="row">
+          <form className="col s12" onSubmit={this.handleSubmit}>
+            <div className="row">
+              <div className="input-field col s12">
+                <input id="password" type="password" className="validate" />
+                <label>Password</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                <input id="email" type="email" className="validate" />
+                <label>Email</label>
+              </div>
+            </div>
+            <div>
+              <button className="btn waves-effect waves-light" type="submit" name="action">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

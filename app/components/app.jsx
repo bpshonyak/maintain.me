@@ -5,7 +5,8 @@ import Nav from './navbar';
  const App = (props) => {
     return (
       <div>
-          <h1>Hello World</h1>
+          <Nav />
+          { props.children }
       </div>
     );
 }
