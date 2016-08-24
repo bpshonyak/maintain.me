@@ -25,7 +25,7 @@ class LoginForm extends Component {
               </div>
             </div>
             <div>
-              <button className="btn waves-effect waves-light" type="submit" name="action">
+              <button className="btn waves-effect waves-light blue darken-3" type="submit" name="action">
                 Submit
               </button>
             </div>
