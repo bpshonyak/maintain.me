@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-import { AUTH_USER, DEAUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, DEAUTH_USER, AUTH_ERROR, PROFILE_DATA } from './types';
 
 const API_URL = "http://localhost:3000";
 
@@ -57,5 +57,24 @@ export function logOutUser() {
 
   return {
     type: DEAUTH_USER
+  }
+}
+
+export function getProfile() {
+  return (dispatch) => {
+
+    const token = localStorage.getItem('token');
+
+    axios.get(`${API_URL}/account/profile`, {
+      headers: {
+        authorization: `bearer ${token}`
+      }
+    }).then( response => {
+      console.log(response.data.profile.email);
+      dispatch({
+        type: PROFILE_DATA,
+        payload: response.data.profile
+      });
+    });
   }
 }
