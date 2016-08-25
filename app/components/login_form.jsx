@@ -5,8 +5,18 @@ import * as actions from './../actions';
 class LoginForm extends Component {
 
   handleFormSubmit({email, password}) {
-    console.log(email, password);
     this.props.logInUser({email, password});
+  }
+
+  renderAlert() {
+    if (this.props.errorMsg)
+      return (
+        <div className="row">
+          <label className="red-text text-darken-2">
+            <strong>{this.props.errorMsg}</strong>
+          </label>
+        </div>
+      )
   }
 
   render() {
@@ -30,6 +40,7 @@ class LoginForm extends Component {
               </div>
             </div>
             <div>
+              {this.renderAlert()}
               <button className="btn waves-effect waves-light blue darken-3" type="submit" name="action">
                 Submit
               </button>
@@ -41,7 +52,11 @@ class LoginForm extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return { errorMsg: state.auth.error };
+}
+
 export default reduxForm({
   form: 'login',
   fields: ['email', 'password']
-}, null, actions)(LoginForm);
+}, mapStateToProps, actions)(LoginForm);

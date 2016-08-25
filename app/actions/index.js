@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 
-import { AUTH_USER, DEAUTH_USER } from './types';
+import { AUTH_USER, AUTH_ERROR } from './types';
 
 const API_URL = "http://localhost:3000";
 
@@ -19,7 +19,14 @@ export function logInUser({email, password}) {
         browserHistory.push('/dashboard'); // redirect user
       })
       .catch( () => {
-
+        dispatch(authError('Incorrect username or password.'));
       })
+  }
+}
+
+export function authError(errorMsg) {
+  return {
+    type: AUTH_ERROR,
+    payload: errorMsg
   }
 }
