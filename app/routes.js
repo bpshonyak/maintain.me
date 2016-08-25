@@ -13,7 +13,7 @@ import RequiredAuth from './components/auth/require_auth';
 import Welcome from './components/welcome';
 
 //Protected routes
-import Dashboard from './components/dashboard';
+import Dashboard from './components/dashboard/dashboard';
 
 export default (
   <Route path="/" component={App}>
