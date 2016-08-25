@@ -10,22 +10,17 @@ export default class MainFab extends Component {
         <ul>
           <li>
             <a className="btn-floating red">
-              <i className="material-icons">insert_chart</i>
-            </a>
-          </li>
-          <li>
-            <a className="btn-floating yellow darken-1">
-              <i className="material-icons">format_quote</i>
+              <i className="material-icons">mode_edit</i>
             </a>
           </li>
           <li>
             <a className="btn-floating green">
-              <i className="material-icons">publish</i>
+              <i className="material-icons">insert_chart</i>
             </a>
           </li>
           <li>
             <a className="btn-floating blue">
-              <i className="material-icons">attach_file</i>
+              <i className="material-icons">settings</i>
             </a>
           </li>
         </ul>
