@@ -39,7 +39,7 @@ class LoginForm extends Component {
                 <label>Password</label>
               </div>
             </div>
-            <div>
+            <div className="row center-align">
               {this.renderAlert()}
               <button className="btn waves-effect waves-light blue darken-3" type="submit" name="action">
                 Submit

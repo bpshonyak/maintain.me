@@ -1,13 +1,17 @@
 {
-"parserOptions": {
+  "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true
         },
-        "sourceType": "module"
-    },
+        "sourceType": "module",
+  },
   "plugins": [
     "react"
   ],
+  "rules": {
+    "no-undef": 0,
+    "react/prop-types": 0
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

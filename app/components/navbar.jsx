@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-export default class Nav extends Component {
-  render() {
+class Nav extends Component {
 
+  renderLinks() {
+    if (this.props.authenticated) {
+      return (
+        <li>
+          <Link to='/logout'>Logout</Link>
+        </li>
+      );
+    } else {
+      return [
+        <li>
+          <Link to='/login' key={1}>Login</Link>
+        </li>,
+        <li>
+          <Link to='/signup' key={2}>Signup</Link>
+        </li>
+      ];
+    }
+  }
+
+  render() {
     return (
       <div>
         <nav>
           <div className="nav-wrapper blue darken-4">
-            <a href="#" className="brand-logo">Logo</a>
+            <Link to="/" className="brand-logo">maintain.me</Link>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/login'>Login</Link>
-              </li>
+              {this.renderLinks()}
             </ul>
           </div>
         </nav>
@@ -24,3 +39,11 @@ export default class Nav extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    authenticated: state.auth.authenticated
+  };
+}
+
+export default connect(mapStateToProps)(Nav);
